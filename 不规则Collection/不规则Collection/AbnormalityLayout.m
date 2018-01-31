@@ -87,7 +87,6 @@
     UIEdgeInsets sectionInset = [self evaluatedSectionInsetForItemAtIndex:indexPath.section];
     
     BOOL isFirstItemInSection = indexPath.item == 0;
-    id<UICollectionViewDelegateAlignedLayout> delegate = (id<UICollectionViewDelegateAlignedLayout>)self.collectionView.delegate;
 
     CGFloat layoutWidth = CGRectGetWidth(self.collectionView.frame) - sectionInset.left - sectionInset.right;
     if (isFirstItemInSection) {

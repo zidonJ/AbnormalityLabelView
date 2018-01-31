@@ -35,6 +35,8 @@ static CGFloat const kAbnormalItemHeight = 30;
     NSInteger _part;
     NSInteger _currentIndex;
 }
+
+@property (nonatomic,assign) CGFloat abnormalHeight;
 @property (strong, nonatomic) UICollectionView *collectionView;
 /** 支持多选的时候 所有选中的标签数据对象*/
 @property (strong, nonatomic) NSMutableArray<MTAbnormalModel *> *selectModels;
@@ -90,7 +92,45 @@ static CGFloat const kAbnormalItemHeight = 30;
         _currentIndex = index;
         MTAbnormalModel *model = _dataSource[index];
         model.selected = YES;
+        [self configMutiSelectArray:model];
     }
+}
+
+- (void)setDefaultSelected:(NSNumber *)indexs, ...
+{
+    [self setDefaultSelect:indexs.integerValue];
+    NSNumber *param;
+    va_list arg_list;
+    va_start(arg_list, indexs);
+    if (index >= 0) {
+        while ((param = va_arg(arg_list, NSNumber *))) {
+            
+            NSInteger tempIndex = param.integerValue;
+            [self setDefaultSelect:tempIndex];
+        }
+        //取完之后毁掉va_list指针
+        va_end(arg_list);
+    }
+}
+
+//单选(手动设置)
+- (void)selectAtIndex:(NSInteger)index {
+    _currentIndex = index;
+    if (_useModel && _dataSource.count && _currentIndex != -1) {
+        _currentIndex = index;
+        [_dataSource enumerateObjectsUsingBlock:^(MTAbnormalModel *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            obj.selected = false;
+        }];
+        MTAbnormalModel *model = _dataSource[index];
+        model.selected = YES;
+    }
+    [self.collectionView reloadData];
+}
+
+- (void)cancelSelectAtIndex:(NSInteger)index {
+    MTAbnormalModel *model = [_dataSource objectAtIndex:index];
+    model.selected = false;
+    [self.collectionView reloadData];
 }
 
 - (void)canMultipleSelect:(BOOL)multSelect
@@ -106,9 +146,13 @@ static CGFloat const kAbnormalItemHeight = 30;
 - (void)reloadWithData:(NSArray<MTAbnormalModel *> *)models
 {
     _dataSource = models;
-    //    [self.selectModels removeAllObjects];
-    //    _currentIndex = -1;
+    //[self.selectModels removeAllObjects];
+    //_currentIndex = -1;
     [self setDefaultSelect:_currentIndex];
+    [_dataSource enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        MTAbnormalModel *model = (MTAbnormalModel *)obj;
+        [self configMutiSelectArray:model];
+    }];
     [self.collectionView reloadData];
 }
 
@@ -137,7 +181,7 @@ static CGFloat const kAbnormalItemHeight = 30;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [_collectionView registerClass:[MTAbnormalCollectionCell class] forCellWithReuseIdentifier:@"cell"];
-    _collectionView.backgroundColor = [UIColor redColor];
+    _collectionView.backgroundColor = [UIColor clearColor];
     [self addSubview:_collectionView];
     
     [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -158,7 +202,7 @@ static CGFloat const kAbnormalItemHeight = 30;
         cellWidth = limitWidth - kCollectionViewCellsHorizonMargin;
         return cellWidth < 0 ? 0:cellWidth;
     }
-    return cellWidth < 0 ? 0:cellWidth  + 16 ;
+    return cellWidth < 0 ? 0:cellWidth  + 16;
 }
 
 - (void)dataSource:(NSArray *)dataSource useModel:(BOOL)useModel config:(MTAbnormalConfigModel *)configrations
@@ -187,11 +231,24 @@ static CGFloat const kAbnormalItemHeight = 30;
     [self mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@(height));
     }];
+    _abnormalHeight = height;
+    if (self.abnormalDelegate && [self.abnormalDelegate respondsToSelector:@selector(completeLayoutHeight:)]) {
+        [self.abnormalDelegate completeLayoutAbnormalHeight:height];
+    }
 }
 
 - (BOOL)isStableHeight
 {
     return _isStable;
+}
+
+- (void)configMutiSelectArray:(__kindof MTAbnormalModel *)model
+{
+    if (model.selected) {
+        [self.selectModels addObject:model];
+    }else{
+        [self.selectModels removeObject:model];
+    }
 }
 
 #pragma mark -- UICollectionViewDelegate
@@ -205,11 +262,7 @@ static CGFloat const kAbnormalItemHeight = 30;
         [cell setContentText:model];
         
         if (_multSelect) {//多选
-            if (model.selected) {
-                [self.selectModels addObject:model];
-            }else{
-                [self.selectModels removeObject:model];
-            }
+            [self configMutiSelectArray:model];
         }else{//单选
             if (_currentIndex >= 0) {
                 if (_currentIndex != indexPath.item) {
@@ -285,7 +338,8 @@ static CGFloat const kAbnormalItemHeight = 30;
     if (!_useCommonStyle) {
         NSString *text = [self getTextWithRow:indexPath.row];
         UIFont *font = (_configrations==nil || _configrations.fontSize<=0)?[UIFont systemFontOfSize:fontSize]:[UIFont systemFontOfSize:_configrations.fontSize];
-        CGSize size = [text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]}];
+        //[UIFont systemFontOfSize:fontSize]
+        CGSize size = [text sizeWithAttributes:@{NSFontAttributeName:font}];
         float width = [self checkCellLimitWidth:ceilf(size.width)];
         return CGSizeMake(width, kAbnormalItemHeight);
     }else{
@@ -323,6 +377,5 @@ static CGFloat const kAbnormalItemHeight = 30;
     }
     return _configSelectTitles;
 }
-
 @end
 

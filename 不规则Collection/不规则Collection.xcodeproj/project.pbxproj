@@ -13,15 +13,14 @@
 		721968661F91F67800419075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721968651F91F67800419075 /* Assets.xcassets */; };
 		721968691F91F67800419075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721968671F91F67800419075 /* LaunchScreen.storyboard */; };
 		7219686C1F91F67800419075 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7219686B1F91F67800419075 /* main.m */; };
-		721968791F92089500419075 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 721968781F92089500419075 /* data.json */; };
-		729D15051FBC083C00F59F60 /* LayoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D15031FBC083C00F59F60 /* LayoutModel.m */; };
-		729D15081FBC0BFE00F59F60 /* CYLDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 729D15071FBC0BFD00F59F60 /* CYLDBManager.m */; };
 		72AB159A1FCFFFF000BF3B10 /* AbnormalityLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15951FCFFFF000BF3B10 /* AbnormalityLayout.m */; };
 		72AB159B1FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15961FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m */; };
 		72AB159C1FCFFFF000BF3B10 /* MTAbnormalityLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15991FCFFFF000BF3B10 /* MTAbnormalityLabelView.m */; };
 		72AB159F1FD0007600BF3B10 /* MTAbnormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB159D1FD0007600BF3B10 /* MTAbnormalModel.m */; };
 		72AB15A21FD000EE00BF3B10 /* UIView+MTCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15A11FD000EE00BF3B10 /* UIView+MTCorner.m */; };
 		72AB15A51FD0013600BF3B10 /* UIImage+ChangeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15A41FD0013600BF3B10 /* UIImage+ChangeImage.m */; };
+		72D633CF20219711001ED750 /* MTCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D633CE20219711001ED750 /* MTCardView.m */; };
+		72D633D220219884001ED750 /* MTCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D633D120219884001ED750 /* MTCardLayout.m */; };
 		B56F0B98B280842D684CC13B /* libPods-不规则Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E518A575E06DB6894FCAD9B /* libPods-不规则Collection.a */; };
 /* End PBXBuildFile section */
 
@@ -38,11 +37,6 @@
 		721968681F91F67800419075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7219686A1F91F67800419075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7219686B1F91F67800419075 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		721968781F92089500419075 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
-		729D15031FBC083C00F59F60 /* LayoutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutModel.m; sourceTree = "<group>"; };
-		729D15041FBC083C00F59F60 /* LayoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutModel.h; sourceTree = "<group>"; };
-		729D15061FBC0BFD00F59F60 /* CYLDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLDBManager.h; sourceTree = "<group>"; };
-		729D15071FBC0BFD00F59F60 /* CYLDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLDBManager.m; sourceTree = "<group>"; };
 		72AB15941FCFFFF000BF3B10 /* MTAbnormalCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAbnormalCollectionCell.h; sourceTree = "<group>"; };
 		72AB15951FCFFFF000BF3B10 /* AbnormalityLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbnormalityLayout.m; sourceTree = "<group>"; };
 		72AB15961FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAbnormalCollectionCell.m; sourceTree = "<group>"; };
@@ -56,6 +50,10 @@
 		72AB15A31FD0013600BF3B10 /* UIImage+ChangeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeImage.h"; sourceTree = "<group>"; };
 		72AB15A41FD0013600BF3B10 /* UIImage+ChangeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeImage.m"; sourceTree = "<group>"; };
 		72AB15A61FD0016F00BF3B10 /* MTSimpleFuncAble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSimpleFuncAble.h; sourceTree = "<group>"; };
+		72D633CD20219711001ED750 /* MTCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCardView.h; sourceTree = "<group>"; };
+		72D633CE20219711001ED750 /* MTCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCardView.m; sourceTree = "<group>"; };
+		72D633D020219884001ED750 /* MTCardLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCardLayout.h; sourceTree = "<group>"; };
+		72D633D120219884001ED750 /* MTCardLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCardLayout.m; sourceTree = "<group>"; };
 		D40388432017B923DACBB363 /* Pods-不规则Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-不规则Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-不规则Collection/Pods-不规则Collection.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,17 +109,16 @@
 				72AB15961FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m */,
 				72AB15971FCFFFF000BF3B10 /* AbnormalityLayout.h */,
 				72AB15951FCFFFF000BF3B10 /* AbnormalityLayout.m */,
+				72D633CD20219711001ED750 /* MTCardView.h */,
+				72D633CE20219711001ED750 /* MTCardView.m */,
+				72D633D020219884001ED750 /* MTCardLayout.h */,
+				72D633D120219884001ED750 /* MTCardLayout.m */,
 				72AB15A01FD000EE00BF3B10 /* UIView+MTCorner.h */,
 				72AB15A11FD000EE00BF3B10 /* UIView+MTCorner.m */,
 				72AB15A31FD0013600BF3B10 /* UIImage+ChangeImage.h */,
 				72AB15A41FD0013600BF3B10 /* UIImage+ChangeImage.m */,
 				72AB159E1FD0007600BF3B10 /* MTAbnormalModel.h */,
 				72AB159D1FD0007600BF3B10 /* MTAbnormalModel.m */,
-				729D15041FBC083C00F59F60 /* LayoutModel.h */,
-				729D15031FBC083C00F59F60 /* LayoutModel.m */,
-				729D15061FBC0BFD00F59F60 /* CYLDBManager.h */,
-				729D15071FBC0BFD00F59F60 /* CYLDBManager.m */,
-				721968781F92089500419075 /* data.json */,
 				721968621F91F67800419075 /* Main.storyboard */,
 				721968651F91F67800419075 /* Assets.xcassets */,
 				721968671F91F67800419075 /* LaunchScreen.storyboard */,
@@ -204,7 +201,6 @@
 				721968691F91F67800419075 /* LaunchScreen.storyboard in Resources */,
 				721968661F91F67800419075 /* Assets.xcassets in Resources */,
 				721968641F91F67800419075 /* Main.storyboard in Resources */,
-				721968791F92089500419075 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,14 +265,14 @@
 				72AB15A51FD0013600BF3B10 /* UIImage+ChangeImage.m in Sources */,
 				72AB15A21FD000EE00BF3B10 /* UIView+MTCorner.m in Sources */,
 				721968611F91F67800419075 /* ViewController.m in Sources */,
-				729D15081FBC0BFE00F59F60 /* CYLDBManager.m in Sources */,
 				72AB159A1FCFFFF000BF3B10 /* AbnormalityLayout.m in Sources */,
 				7219686C1F91F67800419075 /* main.m in Sources */,
 				7219685E1F91F67800419075 /* AppDelegate.m in Sources */,
 				72AB159F1FD0007600BF3B10 /* MTAbnormalModel.m in Sources */,
 				72AB159B1FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m in Sources */,
 				72AB159C1FCFFFF000BF3B10 /* MTAbnormalityLabelView.m in Sources */,
-				729D15051FBC083C00F59F60 /* LayoutModel.m in Sources */,
+				72D633D220219884001ED750 /* MTCardLayout.m in Sources */,
+				72D633CF20219711001ED750 /* MTCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

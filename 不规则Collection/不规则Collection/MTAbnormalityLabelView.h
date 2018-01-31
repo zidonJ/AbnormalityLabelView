@@ -25,6 +25,7 @@
 @interface MTAbnormalityLabelView : UIView
 
 @property (strong, nonatomic) id<MTAbnormalityLabelViewDelegate> abnormalDelegate;
+@property (nonatomic,assign,readonly) CGFloat abnormalHeight;
 
 /**
  使用模型创建标准(等分样式)
@@ -74,18 +75,32 @@
 
 /**
  只有一行的情况
-
+ 
  @param stable 是否稳定行高
  */
 - (void)setOneLineHeightStable:(BOOL)stable;
 
-
 /**
  设置默认选中
-
+ 
  @param index 默认选中的第几个标签
  */
 - (void)setDefaultSelect:(NSInteger)index;
+
+
+/**
+ 设置多选中
+ [self setDefaultSelected:@1,nil]  末尾需要加nil
+ 类似可变数组的初始化参数赋值
+ @param index NSNumber类型 ‘,’分割
+ */
+- (void)setDefaultSelected:(NSNumber *)indexs,...;
+
+/** 设置当前的选中 单选*/
+- (void)selectAtIndex:(NSInteger)index;
+
+/** 取消当前的选中 */
+- (void)cancelSelectAtIndex:(NSInteger)index;
 
 @end
 
@@ -94,6 +109,8 @@
 @protocol MTAbnormalityLabelViewDelegate<NSObject>
 
 @optional
+
+- (void)completeLayoutAbnormalHeight:(CGFloat)height;
 
 /**
  当前选中模式
