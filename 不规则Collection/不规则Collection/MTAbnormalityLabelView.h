@@ -58,6 +58,9 @@
                                       config:(MTAbnormalConfigModel *)configrations;
 
 
+/** 是否可以反选 仅在单选情况下有效果*/
+@property (nonatomic,assign) BOOL canOpsiteSelect;
+
 /**
  刷新数据源
  创建的时候可以继承MTAbnormalModel

@@ -14,15 +14,6 @@
 
 @implementation MTCardLayout
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
-
 //当collectionView的bounds变化时,所展现的cell的个数及显示效果可能会发生变化,此方法返回YES
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
 {

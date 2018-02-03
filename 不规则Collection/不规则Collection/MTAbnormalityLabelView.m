@@ -75,7 +75,7 @@ static CGFloat const kAbnormalItemHeight = 30;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
+        _canOpsiteSelect = YES;
         _part = part;
         [self dataSource:titles useModel:useModel config:configrations];
         [self uiConfig];
@@ -84,12 +84,11 @@ static CGFloat const kAbnormalItemHeight = 30;
 }
 
 #pragma mark -- public
-
+//设置默认选中
 - (void)setDefaultSelect:(NSInteger)index
 {
     _currentIndex = index;
     if (_useModel && _dataSource.count && _currentIndex != -1) {
-        _currentIndex = index;
         MTAbnormalModel *model = _dataSource[index];
         model.selected = YES;
         [self configMutiSelectArray:model];
@@ -117,7 +116,7 @@ static CGFloat const kAbnormalItemHeight = 30;
 - (void)selectAtIndex:(NSInteger)index {
     _currentIndex = index;
     if (_useModel && _dataSource.count && _currentIndex != -1) {
-        _currentIndex = index;
+        
         [_dataSource enumerateObjectsUsingBlock:^(MTAbnormalModel *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             obj.selected = false;
         }];
@@ -143,11 +142,12 @@ static CGFloat const kAbnormalItemHeight = 30;
     _isStable = stable;
 }
 
-- (void)reloadWithData:(NSArray<MTAbnormalModel *> *)models
+- (void)reloadWithData:(NSArray<__kindof MTAbnormalModel *> *)models
 {
+    _dataSource = nil;
     _dataSource = models;
-    //[self.selectModels removeAllObjects];
-    //_currentIndex = -1;
+    //刷新数据源需要清除原来的选中
+    [self.selectModels removeAllObjects];
     [self setDefaultSelect:_currentIndex];
     [_dataSource enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         MTAbnormalModel *model = (MTAbnormalModel *)obj;
@@ -181,7 +181,7 @@ static CGFloat const kAbnormalItemHeight = 30;
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     [_collectionView registerClass:[MTAbnormalCollectionCell class] forCellWithReuseIdentifier:@"cell"];
-    _collectionView.backgroundColor = [UIColor clearColor];
+    _collectionView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_collectionView];
     
     [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -259,21 +259,25 @@ static CGFloat const kAbnormalItemHeight = 30;
     if (_useModel) {
         MTAbnormalModel *model = (MTAbnormalModel *)_dataSource[indexPath.item];
         model.selected = !model.selected;
-        [cell setContentText:model];
+        //        [cell setContentText:model];
         
         if (_multSelect) {//多选
             [self configMutiSelectArray:model];
         }else{//单选
+            if (!_canOpsiteSelect) {//在不能反选的情况下 选中的一定是YES状态
+                model.selected = YES;
+            }
             if (_currentIndex >= 0) {
                 if (_currentIndex != indexPath.item) {
                     MTAbnormalModel *modelBefore = (MTAbnormalModel *)_dataSource[_currentIndex];
                     modelBefore.selected = NO;
-                    NSIndexPath *index = [NSIndexPath indexPathForItem:_currentIndex inSection:0];
-                    [collectionView reloadItemsAtIndexPaths:@[index]];
+                    //                    NSIndexPath *index = [NSIndexPath indexPathForItem:_currentIndex inSection:0];
+                    //                    [collectionView reloadItemsAtIndexPaths:@[index]];
                 }
             }
             _currentIndex = indexPath.item;
         }
+        [collectionView reloadData];
         
         if (self.abnormalDelegate && [self.abnormalDelegate respondsToSelector:@selector(clickCallBack:index:)]) {
             [self.abnormalDelegate clickCallBack:model index:indexPath.item];
@@ -343,7 +347,7 @@ static CGFloat const kAbnormalItemHeight = 30;
         float width = [self checkCellLimitWidth:ceilf(size.width)];
         return CGSizeMake(width, kAbnormalItemHeight);
     }else{
-        CGFloat width = [UIScreen mainScreen].bounds.size.width
+        CGFloat width = self.bounds.size.width
         - kCollectionViewToLeftMargin - kCollectionViewToRightMargin - (_part - 1)*kCollectionViewCellsHorizonMargin;
         return CGSizeMake(width/_part, kAbnormalItemHeight);
     }
@@ -377,5 +381,6 @@ static CGFloat const kAbnormalItemHeight = 30;
     }
     return _configSelectTitles;
 }
+
 @end
 
