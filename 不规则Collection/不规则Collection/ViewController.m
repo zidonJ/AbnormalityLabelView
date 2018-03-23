@@ -31,6 +31,13 @@
     
     
     NSArray *array = @[@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",
+                       @"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",@"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",
+                       @"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",@"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",
+                       @"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",@"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",
+                       @"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",@"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",
+                       @"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",@"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",
+                       @"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",@"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",
+                       @"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",@"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",
                        @"w23r23",@"askdjfhkasjdf",@"历史江东索朗多吉疯了",@"jojo",@"123456789",@"w23r23"];
     MTAbnormalityLabelView *abview = [MTAbnormalityLabelView createWithTitles:array config:nil];
     abview.backgroundColor = [UIColor redColor];

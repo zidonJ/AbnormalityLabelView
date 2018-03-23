@@ -314,7 +314,7 @@ static CGFloat const kAbnormalItemHeight = 30;
     
     CGSize size = [self collectionView:collectionView layout:[UICollectionViewLayout new] sizeForItemAtIndexPath:indexPath];
     cell.label.frame = CGRectMake(0, 0, size.width, size.height);
-    NSString *text = [self getTextWithRow:indexPath.item];
+    //NSString *text = [self getTextWithRow:indexPath.item];
     [cell setStyleConfig:_configrations];
     if (_useModel) {
         

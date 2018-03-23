@@ -20,6 +20,9 @@
 
 @property (nonatomic,weak) id<UICollectionViewDelegateAlignedLayout> amLayoutDelegate;
 
+/** 设置最大的高度限制 如果超过最大的高度就开始滚动 默认值为500*/
+@property (nonatomic,assign) CGFloat maxSizeHeight;
+
 @end
 
 

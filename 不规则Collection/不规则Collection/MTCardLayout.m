@@ -28,6 +28,7 @@
     return CGSizeMake(width, height);
 }
 
+//给每个标签做布局
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -42,6 +43,7 @@
     return attribute;
 }
 
+//返回指定矩形中所有项和视图的布局属性对象
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
     
     NSArray *indexPaths = [self indexPathsInRect:rect];
@@ -50,8 +52,8 @@
     CGFloat centerX =  self.collectionView.contentOffset.x + 0.5*self.collectionView.bounds.size.width;
     NSMutableArray *attributes = [NSMutableArray array];
     for (NSIndexPath *indexPath in indexPaths) {
-        UICollectionViewLayoutAttributes* attribute = [self layoutAttributesForItemAtIndexPath:indexPath];
-        // 判断可见区域和此cell的frame是否有重叠，因为indexPathsInRect返回的indexPath并不是十分准确。
+        UICollectionViewLayoutAttributes *attribute = [self layoutAttributesForItemAtIndexPath:indexPath];
+        // 判断可见区域和此cell的frame是否有重叠,因为indexPathsInRect返回的indexPath并不是十分准确。
         if (!CGRectIntersectsRect(rect, attribute.frame)) {
             //若不重叠则无需进行以下的步骤
             continue;

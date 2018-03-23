@@ -25,10 +25,27 @@
 
 @end
 
+@interface AbnormalityLayout()
+{
+    CGFloat _completeContentSizeHeight;
+}
+
+@end
+
 @implementation AbnormalityLayout
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.maxSizeHeight = 500;
+    }
+    return self;
+}
 
 #pragma mark - UICollectionViewLayout
 
+//第一次布局的时候还没有获取到代理返回的宽度(不规则标签需要单独计算每个Item的宽度 不能一次行全部返回)
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     
     NSArray *array = [super layoutAttributesForElementsInRect:rect];
@@ -50,23 +67,22 @@
         }
     }
     
-    /*
-     第一次布局的时候还没有获取到代理返回的宽度(不规则标签需要单独计算每个Item的宽度 不能一次行全部返回)
-     */
     CGFloat height = -1;
     if (attributesToReturn.count) {
         UIEdgeInsets sectionInset;
         if (!isStable) {
             sectionInset = [self evaluatedSectionInsetForItemAtIndex:0];
             height = last.frame.origin.y + last.frame.size.height + sectionInset.bottom;
-            [self.amLayoutDelegate completeLayoutHeight:height];
+            _completeContentSizeHeight = height;
+            [self.amLayoutDelegate completeLayoutHeight:self.maxSizeHeight];
             
         }else{
             id<UICollectionViewDelegateAlignedLayout> delegate = (id<UICollectionViewDelegateAlignedLayout>)self.collectionView.delegate;
             CGSize size = [delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
             sectionInset = [self evaluatedSectionInsetForItemAtIndex:0];
             height = size.height + sectionInset.top + sectionInset.bottom;
-            [self.amLayoutDelegate completeLayoutHeight:height];
+            _completeContentSizeHeight = height;
+            [self.amLayoutDelegate completeLayoutHeight:self.maxSizeHeight];
         }
     }
     /*
@@ -144,7 +160,7 @@
 
 - (CGSize)collectionViewContentSize
 {
-    return self.collectionView.frame.size;
+    return CGSizeMake(self.collectionView.frame.size.width, _completeContentSizeHeight);
 }
 
 @end
