@@ -158,6 +158,16 @@
     }
 }
 
+#pragma mark -- getters setters --
+- (void)setMaxSizeHeight:(CGFloat)maxSizeHeight
+{
+    if (maxSizeHeight !=0 && maxSizeHeight != NSNotFound) {
+        _maxSizeHeight = maxSizeHeight;
+    }else{
+        _maxSizeHeight = 500;
+    }
+}
+
 - (CGSize)collectionViewContentSize
 {
     return CGSizeMake(self.collectionView.frame.size.width, _completeContentSizeHeight);
