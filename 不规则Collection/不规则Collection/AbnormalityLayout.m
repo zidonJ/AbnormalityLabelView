@@ -74,7 +74,7 @@
             sectionInset = [self evaluatedSectionInsetForItemAtIndex:0];
             height = last.frame.origin.y + last.frame.size.height + sectionInset.bottom;
             _completeContentSizeHeight = height;
-            [self.amLayoutDelegate completeLayoutHeight:self.maxSizeHeight];
+            [self.amLayoutDelegate completeLayoutHeight:MIN(self.maxSizeHeight, _completeContentSizeHeight)];
             
         }else{
             id<UICollectionViewDelegateAlignedLayout> delegate = (id<UICollectionViewDelegateAlignedLayout>)self.collectionView.delegate;
@@ -82,7 +82,7 @@
             sectionInset = [self evaluatedSectionInsetForItemAtIndex:0];
             height = size.height + sectionInset.top + sectionInset.bottom;
             _completeContentSizeHeight = height;
-            [self.amLayoutDelegate completeLayoutHeight:self.maxSizeHeight];
+            [self.amLayoutDelegate completeLayoutHeight:MIN(self.maxSizeHeight, _completeContentSizeHeight)];
         }
     }
     /*
