@@ -177,6 +177,7 @@ static CGFloat const kAbnormalItemHeight = 30;
 {
     AbnormalityLayout *layout = [[AbnormalityLayout alloc] init];
     layout.amLayoutDelegate = self;
+    layout.maxSizeHeight = self.maxSizeHeight;
     _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     _collectionView.delegate = self;
     _collectionView.dataSource = self;

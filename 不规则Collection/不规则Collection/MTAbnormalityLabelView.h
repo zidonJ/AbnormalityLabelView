@@ -26,6 +26,8 @@
 
 @property (strong, nonatomic) id<MTAbnormalityLabelViewDelegate> abnormalDelegate;
 @property (nonatomic,assign,readonly) CGFloat abnormalHeight;
+/** 最大的高度 如果超过这个高度就滚动展示*/
+@property (nonatomic,assign) CGFloat maxSizeHeight;
 
 /**
  使用模型创建标准(等分样式)
