@@ -1,1 +1,1 @@
-../../../../../AbnormalityView/LBAbnormalityLabelView.h
+../../../AbnormalityLabelView/AbnormalityView/LBAbnormalityLabelView.h

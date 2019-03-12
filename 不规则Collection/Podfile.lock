@@ -1,35 +1,31 @@
 PODS:
-  - AbnormalityLabelView (1.0.0):
-    - AbnormalityLabelView/AbnormalityView (= 1.0.0)
-  - AbnormalityLabelView/AbnormalityView (1.0.0):
+  - AbnormalityLabelView (1.0.1):
+    - AbnormalityLabelView/AbnormalityView (= 1.0.1)
+  - AbnormalityLabelView/AbnormalityView (1.0.1):
     - AbnormalityLabelView/Corner
     - Masonry
-  - AbnormalityLabelView/Corner (1.0.0)
-  - AbnormalityLabelView/Drawer (1.0.0):
+  - AbnormalityLabelView/Corner (1.0.1)
+  - AbnormalityLabelView/Drawer (1.0.1):
     - Masonry
   - Masonry (1.1.0)
   - MJExtension (3.0.13)
 
 DEPENDENCIES:
-  - AbnormalityLabelView (from `../`)
-  - AbnormalityLabelView/Drawer (from `../`)
-  - Masonry
+  - AbnormalityLabelView
+  - AbnormalityLabelView/Drawer
   - MJExtension
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AbnormalityLabelView
     - Masonry
     - MJExtension
 
-EXTERNAL SOURCES:
-  AbnormalityLabelView:
-    :path: "../"
-
 SPEC CHECKSUMS:
-  AbnormalityLabelView: a002bd11ca3144144bbca9a93103b0d97e72adc7
+  AbnormalityLabelView: ab5c692e33ab423667e406401ed6e4d9ae2dafc6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
 
-PODFILE CHECKSUM: dff3cc5c313fdd49ef717da11ff2da7aa86c5387
+PODFILE CHECKSUM: a97480e954845feac8cde3099636e0a4b7514b13
 
-COCOAPODS: 1.7.0.beta.1
+COCOAPODS: 1.7.0.beta.2
