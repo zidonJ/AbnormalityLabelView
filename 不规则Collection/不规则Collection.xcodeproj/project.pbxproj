@@ -13,15 +13,10 @@
 		721968661F91F67800419075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721968651F91F67800419075 /* Assets.xcassets */; };
 		721968691F91F67800419075 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721968671F91F67800419075 /* LaunchScreen.storyboard */; };
 		7219686C1F91F67800419075 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7219686B1F91F67800419075 /* main.m */; };
-		72AB159A1FCFFFF000BF3B10 /* AbnormalityLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15951FCFFFF000BF3B10 /* AbnormalityLayout.m */; };
-		72AB159B1FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15961FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m */; };
-		72AB159C1FCFFFF000BF3B10 /* MTAbnormalityLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15991FCFFFF000BF3B10 /* MTAbnormalityLabelView.m */; };
-		72AB159F1FD0007600BF3B10 /* MTAbnormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB159D1FD0007600BF3B10 /* MTAbnormalModel.m */; };
-		72AB15A21FD000EE00BF3B10 /* UIView+MTCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15A11FD000EE00BF3B10 /* UIView+MTCorner.m */; };
-		72AB15A51FD0013600BF3B10 /* UIImage+ChangeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB15A41FD0013600BF3B10 /* UIImage+ChangeImage.m */; };
 		72D633CF20219711001ED750 /* MTCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D633CE20219711001ED750 /* MTCardView.m */; };
 		72D633D220219884001ED750 /* MTCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D633D120219884001ED750 /* MTCardLayout.m */; };
 		B56F0B98B280842D684CC13B /* libPods-不规则Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E518A575E06DB6894FCAD9B /* libPods-不规则Collection.a */; };
+		DC00489F21A695C80003E694 /* UIImage+ChangeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC00489C21A695C80003E694 /* UIImage+ChangeImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,24 +32,14 @@
 		721968681F91F67800419075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7219686A1F91F67800419075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7219686B1F91F67800419075 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		72AB15941FCFFFF000BF3B10 /* MTAbnormalCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAbnormalCollectionCell.h; sourceTree = "<group>"; };
-		72AB15951FCFFFF000BF3B10 /* AbnormalityLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbnormalityLayout.m; sourceTree = "<group>"; };
-		72AB15961FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAbnormalCollectionCell.m; sourceTree = "<group>"; };
-		72AB15971FCFFFF000BF3B10 /* AbnormalityLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbnormalityLayout.h; sourceTree = "<group>"; };
-		72AB15981FCFFFF000BF3B10 /* MTAbnormalityLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAbnormalityLabelView.h; sourceTree = "<group>"; };
-		72AB15991FCFFFF000BF3B10 /* MTAbnormalityLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAbnormalityLabelView.m; sourceTree = "<group>"; };
-		72AB159D1FD0007600BF3B10 /* MTAbnormalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAbnormalModel.m; sourceTree = "<group>"; };
-		72AB159E1FD0007600BF3B10 /* MTAbnormalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAbnormalModel.h; sourceTree = "<group>"; };
-		72AB15A01FD000EE00BF3B10 /* UIView+MTCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MTCorner.h"; sourceTree = "<group>"; };
-		72AB15A11FD000EE00BF3B10 /* UIView+MTCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MTCorner.m"; sourceTree = "<group>"; };
-		72AB15A31FD0013600BF3B10 /* UIImage+ChangeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeImage.h"; sourceTree = "<group>"; };
-		72AB15A41FD0013600BF3B10 /* UIImage+ChangeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeImage.m"; sourceTree = "<group>"; };
 		72AB15A61FD0016F00BF3B10 /* MTSimpleFuncAble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSimpleFuncAble.h; sourceTree = "<group>"; };
 		72D633CD20219711001ED750 /* MTCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCardView.h; sourceTree = "<group>"; };
 		72D633CE20219711001ED750 /* MTCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCardView.m; sourceTree = "<group>"; };
 		72D633D020219884001ED750 /* MTCardLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCardLayout.h; sourceTree = "<group>"; };
 		72D633D120219884001ED750 /* MTCardLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCardLayout.m; sourceTree = "<group>"; };
 		D40388432017B923DACBB363 /* Pods-不规则Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-不规则Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-不规则Collection/Pods-不规则Collection.debug.xcconfig"; sourceTree = "<group>"; };
+		DC00489A21A695C80003E694 /* UIImage+ChangeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeImage.h"; sourceTree = "<group>"; };
+		DC00489C21A695C80003E694 /* UIImage+ChangeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeImage.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,27 +83,16 @@
 		7219685B1F91F67800419075 /* 不规则Collection */ = {
 			isa = PBXGroup;
 			children = (
+				DC00489921A695C80003E694 /* category */,
 				72AB15A61FD0016F00BF3B10 /* MTSimpleFuncAble.h */,
 				7219685C1F91F67800419075 /* AppDelegate.h */,
 				7219685D1F91F67800419075 /* AppDelegate.m */,
 				7219685F1F91F67800419075 /* ViewController.h */,
 				721968601F91F67800419075 /* ViewController.m */,
-				72AB15981FCFFFF000BF3B10 /* MTAbnormalityLabelView.h */,
-				72AB15991FCFFFF000BF3B10 /* MTAbnormalityLabelView.m */,
-				72AB15941FCFFFF000BF3B10 /* MTAbnormalCollectionCell.h */,
-				72AB15961FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m */,
-				72AB15971FCFFFF000BF3B10 /* AbnormalityLayout.h */,
-				72AB15951FCFFFF000BF3B10 /* AbnormalityLayout.m */,
 				72D633CD20219711001ED750 /* MTCardView.h */,
 				72D633CE20219711001ED750 /* MTCardView.m */,
 				72D633D020219884001ED750 /* MTCardLayout.h */,
 				72D633D120219884001ED750 /* MTCardLayout.m */,
-				72AB15A01FD000EE00BF3B10 /* UIView+MTCorner.h */,
-				72AB15A11FD000EE00BF3B10 /* UIView+MTCorner.m */,
-				72AB15A31FD0013600BF3B10 /* UIImage+ChangeImage.h */,
-				72AB15A41FD0013600BF3B10 /* UIImage+ChangeImage.m */,
-				72AB159E1FD0007600BF3B10 /* MTAbnormalModel.h */,
-				72AB159D1FD0007600BF3B10 /* MTAbnormalModel.m */,
 				721968621F91F67800419075 /* Main.storyboard */,
 				721968651F91F67800419075 /* Assets.xcassets */,
 				721968671F91F67800419075 /* LaunchScreen.storyboard */,
@@ -137,6 +111,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DC00489921A695C80003E694 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				DC00489A21A695C80003E694 /* UIImage+ChangeImage.h */,
+				DC00489C21A695C80003E694 /* UIImage+ChangeImage.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,8 +131,6 @@
 				721968551F91F67800419075 /* Sources */,
 				721968561F91F67800419075 /* Frameworks */,
 				721968571F91F67800419075 /* Resources */,
-				608C006FE4D6447F63294D98 /* [CP] Embed Pods Frameworks */,
-				824143AC4C2BA2F3BA1E512D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,36 +206,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		608C006FE4D6447F63294D98 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-不规则Collection/Pods-不规则Collection-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		824143AC4C2BA2F3BA1E512D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-不规则Collection/Pods-不规则Collection-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,15 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72AB15A51FD0013600BF3B10 /* UIImage+ChangeImage.m in Sources */,
-				72AB15A21FD000EE00BF3B10 /* UIView+MTCorner.m in Sources */,
+				DC00489F21A695C80003E694 /* UIImage+ChangeImage.m in Sources */,
 				721968611F91F67800419075 /* ViewController.m in Sources */,
-				72AB159A1FCFFFF000BF3B10 /* AbnormalityLayout.m in Sources */,
 				7219686C1F91F67800419075 /* main.m in Sources */,
 				7219685E1F91F67800419075 /* AppDelegate.m in Sources */,
-				72AB159F1FD0007600BF3B10 /* MTAbnormalModel.m in Sources */,
-				72AB159B1FCFFFF000BF3B10 /* MTAbnormalCollectionCell.m in Sources */,
-				72AB159C1FCFFFF000BF3B10 /* MTAbnormalityLabelView.m in Sources */,
 				72D633D220219884001ED750 /* MTCardLayout.m in Sources */,
 				72D633CF20219711001ED750 /* MTCardView.m in Sources */,
 			);

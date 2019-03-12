@@ -1,14 +1,14 @@
 //
-//  UIView+MTCorner.h
-//  CollectionLayoutTest
+//  UIView+Corner.h
+//  Corner
 //
-//  Created by 姜泽东 on 2017/10/11.
-//  Copyright © 2017年 MaiTian. All rights reserved.
+//  Created by zidonj on 2018/12/10.
+//  Copyright © 2018 langlib. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (MTCorner)
+@interface UIView (Corner)
 
 
 /**
