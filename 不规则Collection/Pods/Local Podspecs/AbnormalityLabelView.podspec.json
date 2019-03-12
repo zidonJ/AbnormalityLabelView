@@ -24,23 +24,31 @@
   "subspecs": [
     {
       "name": "AbnormalityView",
-      "source_files": "AbnormalityView/*.{h,m}",
-      "public_header_files": "AbnormalityView/*.h",
+      "source_files": "AbnormalityView/**/*.{h,m}",
+      "public_header_files": "AbnormalityView/**/*.h",
       "dependencies": {
         "AbnormalityLabelView/Corner": [
+
+        ],
+        "Masonry": [
 
         ]
       }
     },
     {
       "name": "Drawer",
-      "source_files": "Drawer/*.{h,m}",
-      "public_header_files": "Drawer/*.h"
+      "source_files": "Drawer/**/*.{h,m}",
+      "public_header_files": "Drawer/**/*.h",
+      "dependencies": {
+        "Masonry": [
+
+        ]
+      }
     },
     {
       "name": "Corner",
-      "source_files": "Corner/*.{h,m}",
-      "public_header_files": "Corner/*.h"
+      "source_files": "Corner/**/*.{h,m}",
+      "public_header_files": "Corner/**/*.h"
     }
   ]
 }

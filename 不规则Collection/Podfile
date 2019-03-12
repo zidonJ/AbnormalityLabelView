@@ -8,7 +8,6 @@ target '不规则Collection' do
   pod 'MJExtension'
   pod 'AbnormalityLabelView', :path=>'../'
   pod 'AbnormalityLabelView', :subspecs=>['Drawer'], :path=>'../'
-  #  pod 'AbnormalityLabelView/Drawer', :path=>'../'
 
   # Pods for 不规则Collection
 
