@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "AbnormalityLabelView"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "collectionview实现不规则标签布局"
   
   spec.description  = <<-DESC
@@ -58,7 +58,7 @@ Pod::Spec.new do |spec|
     ss.source_files = "Corner/*.{h,m}"
     ss.public_header_files = "Corner/*.h"
   end
-    
+  
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
   
