@@ -17,7 +17,7 @@
 		72D633D220219884001ED750 /* MTCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D633D120219884001ED750 /* MTCardLayout.m */; };
 		B56F0B98B280842D684CC13B /* libPods-不规则Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E518A575E06DB6894FCAD9B /* libPods-不规则Collection.a */; };
 		DC00489F21A695C80003E694 /* UIImage+ChangeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC00489C21A695C80003E694 /* UIImage+ChangeImage.m */; };
-		DC34BAE22237AFB700BB25B8 /* expimg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC34BAE12237AFB700BB25B8 /* expimg@2x.png */; };
+		DC34BAE42237B38D00BB25B8 /* expimg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC34BAE32237B38D00BB25B8 /* expimg@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,7 @@
 		D40388432017B923DACBB363 /* Pods-不规则Collection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-不规则Collection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-不规则Collection/Pods-不规则Collection.debug.xcconfig"; sourceTree = "<group>"; };
 		DC00489A21A695C80003E694 /* UIImage+ChangeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ChangeImage.h"; sourceTree = "<group>"; };
 		DC00489C21A695C80003E694 /* UIImage+ChangeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ChangeImage.m"; sourceTree = "<group>"; };
-		DC34BAE12237AFB700BB25B8 /* expimg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expimg@2x.png"; sourceTree = "<group>"; };
+		DC34BAE32237B38D00BB25B8 /* expimg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expimg@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 				72D633D020219884001ED750 /* MTCardLayout.h */,
 				72D633D120219884001ED750 /* MTCardLayout.m */,
 				721968621F91F67800419075 /* Main.storyboard */,
-				DC34BAE12237AFB700BB25B8 /* expimg@2x.png */,
+				DC34BAE32237B38D00BB25B8 /* expimg@2x.png */,
 				721968651F91F67800419075 /* Assets.xcassets */,
 				721968671F91F67800419075 /* LaunchScreen.storyboard */,
 				7219686A1F91F67800419075 /* Info.plist */,
@@ -182,7 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC34BAE22237AFB700BB25B8 /* expimg@2x.png in Resources */,
+				DC34BAE42237B38D00BB25B8 /* expimg@2x.png in Resources */,
 				721968691F91F67800419075 /* LaunchScreen.storyboard in Resources */,
 				721968661F91F67800419075 /* Assets.xcassets in Resources */,
 				721968641F91F67800419075 /* Main.storyboard in Resources */,
