@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class LBAbnormalConfigModel;
 
+/// 标签的数据Model,返回数据Modle需要继承这个LBAbnormalModel
 @interface LBAbnormalModel : NSObject
 
 /** 是否处于选中状态*/
@@ -27,9 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-/**
- 用于做标签样式的控制
- */
+/**用于做标签样式的控制*/
 @interface LBAbnormalConfigModel : NSObject
 
 ///均分成几等份(默认为0-不规则布局)
@@ -40,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///sectionFooter类 需要header的时候需要设置
 @property (nonatomic,strong) Class reusableFooterClass;
 
-///获取属性名字
+///标签的文字 会根据keyTitle获取modley需要展示的内容
 @property (nonatomic,copy) NSString *keyTitle;
 @property (nonatomic,strong) UIColor *normalBorderColor;
 @property (nonatomic,strong) UIColor *selectBorderColor;

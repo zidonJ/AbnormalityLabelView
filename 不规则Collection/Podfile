@@ -6,8 +6,8 @@ target '不规则Collection' do
   # use_frameworks!
 #  pod 'Masonry'
   pod 'MJExtension'
-  pod 'AbnormalityLabelView'
-  pod 'AbnormalityLabelView', :subspecs=>['Drawer']
+  pod 'AbnormalityLabelView', :path => '../'
+  pod 'AbnormalityLabelView', :subspecs => ['Drawer'], :path => '../'
 
   # Pods for 不规则Collection
 

@@ -1,6 +1,6 @@
 {
   "name": "AbnormalityLabelView",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "collectionview实现不规则标签布局",
   "description": "不规则标签展示",
   "homepage": "https://github.com/zidonJ/AbnormalityLabelView",
@@ -14,7 +14,7 @@
   "static_framework": true,
   "source": {
     "git": "https://github.com/zidonJ/AbnormalityLabelView.git",
-    "tag": "1.0.0"
+    "tag": "1.0.1"
   },
   "default_subspecs": "AbnormalityView",
   "requires_arc": true,
@@ -24,8 +24,8 @@
   "subspecs": [
     {
       "name": "AbnormalityView",
-      "source_files": "AbnormalityView/**/*.{h,m}",
-      "public_header_files": "AbnormalityView/**/*.h",
+      "source_files": "AbnormalityView/*.{h,m}",
+      "public_header_files": "AbnormalityView/*.h",
       "dependencies": {
         "AbnormalityLabelView/Corner": [
 
@@ -37,8 +37,8 @@
     },
     {
       "name": "Drawer",
-      "source_files": "Drawer/**/*.{h,m}",
-      "public_header_files": "Drawer/**/*.h",
+      "source_files": "Drawer/*.{h,m}",
+      "public_header_files": "Drawer/*.h",
       "dependencies": {
         "Masonry": [
 
@@ -47,8 +47,8 @@
     },
     {
       "name": "Corner",
-      "source_files": "Corner/**/*.{h,m}",
-      "public_header_files": "Corner/**/*.h"
+      "source_files": "Corner/*.{h,m}",
+      "public_header_files": "Corner/*.h"
     }
   ]
 }

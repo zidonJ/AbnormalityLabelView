@@ -75,12 +75,13 @@ NS_INLINE NSString *sfloatToInt(NSString *value) {
 NS_INLINE bool IsXScreen() {
     
     if (@available(iOS 11.0, *)) {
-        //iOS11和11的top值不同 这里取了折中的办法
-        return LBStatusBarHeight > 20;
+        UIWindow *win = !UIApplication.sharedApplication.keyWindow ? UIApplication.sharedApplication.windows[0]:UIApplication.sharedApplication.keyWindow;
+        return win.safeAreaInsets.bottom > 0;
     }else {
         return false;
     }
 }
+
 
 
 #endif /* MTSimpleFuncAble_h */
