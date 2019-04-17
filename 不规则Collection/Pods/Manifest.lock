@@ -1,11 +1,11 @@
 PODS:
-  - AbnormalityLabelView (1.0.1):
-    - AbnormalityLabelView/AbnormalityView (= 1.0.1)
-  - AbnormalityLabelView/AbnormalityView (1.0.1):
+  - AbnormalityLabelView (1.1.1):
+    - AbnormalityLabelView/AbnormalityView (= 1.1.1)
+  - AbnormalityLabelView/AbnormalityView (1.1.1):
     - AbnormalityLabelView/Corner
     - Masonry
-  - AbnormalityLabelView/Corner (1.0.1)
-  - AbnormalityLabelView/Drawer (1.0.1):
+  - AbnormalityLabelView/Corner (1.1.1)
+  - AbnormalityLabelView/Drawer (1.1.1):
     - Masonry
   - Masonry (1.1.0)
   - MJExtension (3.0.13)
@@ -25,7 +25,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AbnormalityLabelView: ab5c692e33ab423667e406401ed6e4d9ae2dafc6
+  AbnormalityLabelView: 29f9ceef82c7ee7020192b891372f25a78d871b3
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
 
