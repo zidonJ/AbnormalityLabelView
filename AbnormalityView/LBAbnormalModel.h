@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class LBAbnormalConfigModel;
 
+/// 标签的数据Model，返回数据应该继承LBAbnormalModel
 @interface LBAbnormalModel : NSObject
 
 /** 是否处于选中状态*/
@@ -40,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///sectionFooter类 需要header的时候需要设置
 @property (nonatomic,strong) Class reusableFooterClass;
 
-///获取属性名字
+/// 标签的标题 网络返回数据的属性名字(key)赋值给keyTitle
 @property (nonatomic,copy) NSString *keyTitle;
 @property (nonatomic,strong) UIColor *normalBorderColor;
 @property (nonatomic,strong) UIColor *selectBorderColor;

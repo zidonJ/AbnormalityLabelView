@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "AbnormalityLabelView"
-  spec.version      = "1.0.1"
+  spec.version      = "1.1.1"
   spec.summary      = "collectionview实现不规则标签布局"
   
   spec.description  = <<-DESC
