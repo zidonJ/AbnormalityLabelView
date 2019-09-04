@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "AbnormalityLabelView"
-  spec.version      = "1.3.1"
+  spec.version      = "1.4"
   spec.summary      = "collectionview实现不规则标签布局"
   
   spec.description  = <<-DESC
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.author             = { "zidonJ" => "https://github.com/zidonJ" }
   
   spec.platform     = :ios
-#  spec.platform     = :ios, "8.0"
+  spec.platform     = :ios, "8.0"
 
   spec.ios.deployment_target = "8.0"
   #spec.static_framework = true
@@ -37,10 +37,10 @@ Pod::Spec.new do |spec|
   # spec.public_header_files = "Classes/**/*.h"
   
   spec.requires_arc = true
-  spec.xcconfig = {
-    "OTHER_LDFLAGS" => "$(inherited) -ObjC -all_load"
-  }
-  
+#  spec.xcconfig = {
+#    "OTHER_LDFLAGS" => "$(inherited) -ObjC -all_load"
+#  }
+
   spec.subspec "AbnormalityView" do |ss|
     ss.source_files = "AbnormalityView/*.{h,m}"
     ss.public_header_files = "AbnormalityView/*.h"
