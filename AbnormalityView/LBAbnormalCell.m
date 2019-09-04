@@ -52,7 +52,7 @@
     _label.numberOfLines = 1;
     _label.font = [UIFont systemFontOfSize:14];
     [self.contentView addSubview:_label];
-    [_label cornerRadius:12.5 borderColor:nil borderWidth:0];
+    [_label lbcornerRadius:12.5 borderColor:nil borderWidth:0];
 }
 
 #pragma mark -- public
