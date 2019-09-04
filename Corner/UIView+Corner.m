@@ -25,7 +25,7 @@ static char kMaskLayerKey;
 static char kBorderShapeLayerKey;
 static char kMaskLayerKey;
 
-- (void)cornerRadius:(CGFloat)radius borderColor:(UIColor *)color borderWidth:(CGFloat)width {
+- (void)lbcornerRadius:(CGFloat)radius borderColor:(UIColor *)color borderWidth:(CGFloat)width {
     
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = radius;
@@ -86,7 +86,7 @@ static char kMaskLayerKey;
     }
 }
 
-- (void)makeShadowOffset:(CGFloat)xpadding y:(CGFloat)ypadding opacity:(CGFloat)opacity {
+- (void)lbmakeShadowOffset:(CGFloat)xpadding y:(CGFloat)ypadding opacity:(CGFloat)opacity {
     
     self.layer.shadowOpacity = opacity;
     self.layer.shadowOffset = CGSizeMake(xpadding, ypadding);

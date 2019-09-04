@@ -10,7 +10,7 @@
 
 @interface UIView (Corner)
 
-- (void)cornerRadius:(CGFloat)radius borderColor:(UIColor *)color borderWidth:(CGFloat)width;
+- (void)lbcornerRadius:(CGFloat)radius borderColor:(UIColor *)color borderWidth:(CGFloat)width;
 
 - (void)lbCornersRadius:(CGFloat)radius borderColor:(UIColor *)color borderWidth:(CGFloat)width;
 - (void)lbCornersRadius:(CGFloat)radius
@@ -20,6 +20,6 @@
 
 - (void)lbNoSaveCornersRadius:(CGFloat)radius borderColor:(UIColor *_Nullable)color borderWidth:(CGFloat)width;
 
-- (void)makeShadowOffset:(CGFloat)xpadding y:(CGFloat)ypadding opacity:(CGFloat)opacity;
+- (void)lbmakeShadowOffset:(CGFloat)xpadding y:(CGFloat)ypadding opacity:(CGFloat)opacity;
 
 @end
