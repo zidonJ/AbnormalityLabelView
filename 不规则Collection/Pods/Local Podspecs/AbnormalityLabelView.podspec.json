@@ -1,6 +1,6 @@
 {
   "name": "AbnormalityLabelView",
-  "version": "1.1.1",
+  "version": "1.3.0",
   "summary": "collectionview实现不规则标签布局",
   "description": "不规则标签展示",
   "homepage": "https://github.com/zidonJ/AbnormalityLabelView",
@@ -11,10 +11,9 @@
   "platforms": {
     "ios": "9.0"
   },
-  "static_framework": true,
   "source": {
     "git": "https://github.com/zidonJ/AbnormalityLabelView.git",
-    "tag": "1.1.1"
+    "tag": "1.3.0"
   },
   "default_subspecs": "AbnormalityView",
   "requires_arc": true,

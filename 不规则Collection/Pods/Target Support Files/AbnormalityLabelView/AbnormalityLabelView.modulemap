@@ -1,0 +1,6 @@
+framework module AbnormalityLabelView {
+  umbrella header "AbnormalityLabelView-umbrella.h"
+
+  export *
+  module * { export * }
+}

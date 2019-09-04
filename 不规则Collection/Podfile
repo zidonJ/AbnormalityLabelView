@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
+use_frameworks!
 
 target '不规则Collection' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -8,6 +9,8 @@ target '不规则Collection' do
   pod 'MJExtension'
   pod 'AbnormalityLabelView', :path => '../'
   pod 'AbnormalityLabelView', :subspecs => ['Drawer'], :path => '../'
+#  pod 'AbnormalityLabelView'
+#  pod 'AbnormalityLabelView', :subspecs => ['Drawer']
 
   # Pods for 不规则Collection
 

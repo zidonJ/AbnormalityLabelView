@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
   
   spec.name         = "AbnormalityLabelView"
-  spec.version      = "1.3.0"
+  spec.version      = "1.3.1"
   spec.summary      = "collectionview实现不规则标签布局"
   
   spec.description  = <<-DESC
@@ -25,10 +25,10 @@ Pod::Spec.new do |spec|
   spec.author             = { "zidonJ" => "https://github.com/zidonJ" }
   
   spec.platform     = :ios
-  spec.platform     = :ios, "9.0"
-  
-  spec.ios.deployment_target = "9.0"
-  spec.static_framework = true
+#  spec.platform     = :ios, "8.0"
+
+  spec.ios.deployment_target = "8.0"
+  #spec.static_framework = true
   spec.source       = { :git => "https://github.com/zidonJ/AbnormalityLabelView.git", :tag => "#{spec.version}" }
   spec.default_subspec =  'AbnormalityView'
   

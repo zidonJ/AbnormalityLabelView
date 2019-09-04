@@ -15,13 +15,12 @@
 		7219686C1F91F67800419075 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7219686B1F91F67800419075 /* main.m */; };
 		72D633CF20219711001ED750 /* MTCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D633CE20219711001ED750 /* MTCardView.m */; };
 		72D633D220219884001ED750 /* MTCardLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D633D120219884001ED750 /* MTCardLayout.m */; };
-		B56F0B98B280842D684CC13B /* libPods-不规则Collection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E518A575E06DB6894FCAD9B /* libPods-不规则Collection.a */; };
 		DC00489F21A695C80003E694 /* UIImage+ChangeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DC00489C21A695C80003E694 /* UIImage+ChangeImage.m */; };
 		DC34BAE42237B38D00BB25B8 /* expimg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC34BAE32237B38D00BB25B8 /* expimg@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2E518A575E06DB6894FCAD9B /* libPods-不规则Collection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-不规则Collection.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10C81ABB828FBE71DF7E11EA /* Pods____Collection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods____Collection.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F6521172C890E5077FB16C /* Pods-不规则Collection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-不规则Collection.release.xcconfig"; path = "Pods/Target Support Files/Pods-不规则Collection/Pods-不规则Collection.release.xcconfig"; sourceTree = "<group>"; };
 		721968591F91F67800419075 /* 不规则Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "不规则Collection.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7219685C1F91F67800419075 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -49,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B56F0B98B280842D684CC13B /* libPods-不规则Collection.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +57,7 @@
 		17BDE8AF93D73BA81AA254C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2E518A575E06DB6894FCAD9B /* libPods-不规则Collection.a */,
+				10C81ABB828FBE71DF7E11EA /* Pods____Collection.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +132,7 @@
 				721968551F91F67800419075 /* Sources */,
 				721968561F91F67800419075 /* Frameworks */,
 				721968571F91F67800419075 /* Resources */,
+				5A31EFB2A4EDD15E3097D70D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +207,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A31EFB2A4EDD15E3097D70D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-不规则Collection/Pods-不规则Collection-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AbnormalityLabelView/AbnormalityLabelView.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AbnormalityLabelView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-不规则Collection/Pods-不规则Collection-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
