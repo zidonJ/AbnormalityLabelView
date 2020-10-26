@@ -17,7 +17,6 @@ static CGFloat fontSize = 14;
 
 @property (nonatomic, strong) UILabel *label;
 
-
 - (void)setContentText:(__kindof LBAbnormalModel *)model configModel:(LBAbnormalConfigModel *)cmodel;
 
 @end

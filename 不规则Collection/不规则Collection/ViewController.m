@@ -60,7 +60,7 @@
         [mtarr addObject:model];
     }];
     _abView = [LBAbnormalityLabelView createWithConfigModel:[self simpleGetConfigModel]];
-    _abView.multSelect = NO;
+    _abView.multSelect = YES;
     _abView.canOpsiteSelect = NO;
     _abView.collectionInset = UIEdgeInsetsMake(30 + (IsXScreen() ? 15:0), 0, 0, 0);
     _abView.abnormalDelegate = self;
@@ -94,7 +94,7 @@
     model.selectBackGroundColor = ssRGBHex(0xF8A920);
     model.textColor = ssRGBHex(0x333333);
     model.selectTextColor = ssRGBHex(0xFFFFFF);
-    model.radius = 15;
+    model.radius = 12.5;
     model.keyTitle = @"title";
     return model;
 }

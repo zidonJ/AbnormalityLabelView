@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign) UIEdgeInsets sectionInset;
 /// collectionView contentInset
 @property (nonatomic,assign) UIEdgeInsets collectionInset;
+/// 设置标签圆角大小
+@property (nonatomic,assign) CGFloat cornerRadius;
 
 /// 标签字体
 @property (nonatomic,strong) UIFont *itemFont;

@@ -40,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///sectionFooter类 需要header的时候需要设置
 @property (nonatomic,strong) Class reusableFooterClass;
+@property (nonatomic,strong) Class cellClass;
 
 /// 标签的标题 网络返回数据的属性名字(key)赋值给keyTitle
 @property (nonatomic,copy) NSString *keyTitle;

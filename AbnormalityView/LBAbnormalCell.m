@@ -17,8 +17,6 @@
 #define LabelNormalTextColor ssTempRGBHex(0xFFB03A)
 #define LabelSelectTextColor ssTempRGBHex(0xFFFFFF)
 
-
-
 @interface LBAbnormalCell () {
     
     UIColor *_normalBorderColor;
@@ -52,7 +50,6 @@
     _label.numberOfLines = 1;
     _label.font = [UIFont systemFontOfSize:14];
     [self.contentView addSubview:_label];
-    [_label lbcornerRadius:12.5 borderColor:nil borderWidth:0];
 }
 
 #pragma mark -- public
@@ -68,7 +65,10 @@
         _label.textColor = cmodel.textColor;
         _label.backgroundColor = cmodel.backGroundColor;
     }
+    [_label lbcornerRadius:12.5 borderColor:nil borderWidth:0];
+    [_label setNeedsLayout];
+    [_label setNeedsDisplay];
+    
 }
-
 
 @end

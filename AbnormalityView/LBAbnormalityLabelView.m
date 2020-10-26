@@ -39,6 +39,7 @@ static NSString *const kAbNormalityFooterIdentifer = @"AbNormalityFooterIdentife
 
 @property (nonatomic,strong) Class reusableHeaderClass;
 @property (nonatomic,strong) Class reusableFooterClass;
+@property (nonatomic,strong) Class reusableCellClass;
 @property (nonatomic,strong) NSMutableArray *dataSource;
 @property (nonatomic,assign) CGFloat abnormalHeight;
 @property (strong, nonatomic) UICollectionView *collectionView;
@@ -67,6 +68,7 @@ static NSString *const kAbNormalityFooterIdentifer = @"AbNormalityFooterIdentife
         _part = configModel.divedebyPart;
         _reusableHeaderClass = configModel.reusableHeaderClass;
         _reusableFooterClass = configModel.reusableFooterClass;
+        _reusableCellClass = configModel.cellClass;
         _currentIndex = nil;
         _configrations = configModel;
         _useCommonStyle = _part != 0;
@@ -368,7 +370,8 @@ static NSString *const kAbNormalityFooterIdentifer = @"AbNormalityFooterIdentife
             _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
         }
         
-        [_collectionView registerClass:[LBAbnormalCell class] forCellWithReuseIdentifier:kAbNormalityLabelIdentifer];
+        _reusableCellClass = !_reusableCellClass ? LBAbnormalCell.class : _reusableCellClass;
+        [_collectionView registerClass:_reusableCellClass forCellWithReuseIdentifier:kAbNormalityLabelIdentifer];
         if (self.reusableHeaderClass) {
             [_collectionView registerClass:self.reusableHeaderClass
                 forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
